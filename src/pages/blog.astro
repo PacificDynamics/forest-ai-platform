@@ -1,0 +1,206 @@
+---
+// Component Script (JavaScript)
+const {
+  title = "ForestAI: An AI-Powered Platform for Enhanced Forest Resource Assessment and Health Monitoring",
+  description = "Introducing an innovative platform leveraging artificial intelligence for automated forest assessment, monitoring and projection of forest resources and health conditions.",
+  pubDate = "2025-04-05",
+  heroImage = "/blog/forestai-hero.jpg",
+  tags = ["AI", "Forest Monitoring", "Sustainability"]
+} = Astro.props;
+
+const formattedDate = new Date(pubDate).toLocaleDateString('en-US', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+---
+
+<div class="container mx-auto px-4 py-8 max-w-5xl">
+  <header class="text-center mb-12">
+    <h1 class="text-4xl font-bold text-green-800 mb-4">{title}</h1>
+    <div class="flex justify-center mt-6">
+      <p class="text-sm text-gray-500">{formattedDate}</p>
+    </div>
+    {tags.length > 0 && (
+      <div class="flex flex-wrap justify-center gap-2 mt-4">
+        {tags.map((tag) => (
+          <span class="px-3 py-1 bg-green-100 text-green-800 text-sm rounded-full">{tag}</span>
+        ))}
+      </div>
+    )}
+  </header>
+
+  <section class="bg-amber-50 p-6 rounded-lg shadow-md mb-10">
+    <p class="mb-4">
+      In the southeastern United States, known as the wood basket of the nation, 70% of U.S. reforestation occurs, producing over 25% of the world's pulpwood and 18% of its saw timber, so advanced forest monitoring tools are increasingly critical in this region. To address this need, we developed ForestAI, a web-based platform leveraging artificial intelligence to enhance automated assessment, monitoring and projection of forest resources and health conditions.
+    </p>
+  </section>
+
+    <section class="bg-white p-6 rounded-lg shadow-md">
+      <h2 class="text-2xl font-semibold text-green-700 mb-4">Priorities, Pilots, and Goals</h2>
+      <p class="mb-4">
+        Current research priorities include validating the platform's effectiveness with existing data sources and real-world applications, particularly for early detection of pests and diseases. Future development will focus on integrating emerging technologies, high-resolution satellite imagery and structural measurements and advanced drone observations, to improve scalability. This research contributes to modernizing forest monitoring, data analytics, and decision-making support in the southeastern U.S., to enhance forest productivity and resilience while maintaining high standards of accuracy in resource assessment.
+      </p>
+    </section>
+
+
+  <section class="bg-white p-6 rounded-lg shadow-md mb-10">
+    <h2 class="text-2xl font-semibold text-green-700 mb-4">Species Distribution Model Workflow: Oak Wilt Disease Pilot Study</h2>
+    <p class="mb-4">
+      Our pilot study focuses on Oak Wilt disease detection and prediction, demonstrating the platform's capabilities for forest health monitoring.
+    </p>
+    
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 mt-6">
+      <div class="bg-blue-50 p-4 rounded-lg">
+        <h3 class="font-semibold text-blue-800 mb-2">Data Acquisition & Processing</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Climate Data Collection → Process Climate Variables</li>
+          <li>Oak Wilt Data → Prepare Reference Dataset</li>
+          <li>Split Training & Testing Data</li>
+        </ul>
+      </div>
+      
+      <div class="bg-green-50 p-4 rounded-lg">
+        <h3 class="font-semibold text-green-800 mb-2">Predictive Modeling</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>XGBoost</li>
+          <li>Random Forest</li>
+          <li>SVM</li>
+          <li>Neural Network</li>
+          <li>Model Evaluation</li>
+        </ul>
+      </div>
+      
+      <div class="bg-amber-50 p-4 rounded-lg">
+        <h3 class="font-semibold text-amber-800 mb-2">Prediction & Validation</h3>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Generate Oak Wilt Risk Predictions</li>
+          <li>Generate Risk Maps and Reports</li>
+          <li>Validate with Field Observations</li>
+        </ul>
+      </div>
+    </div>
+    
+
+      <div>
+        <img src="/public/images/oak-wilt-distribution.jpg" alt="Distribution of Oak Wilt Observations in Southeastern United States" class="rounded-lg shadow-sm w-full" />
+      </div>
+    
+  </section>
+
+  <section class="bg-green-50 p-6 rounded-lg shadow-md">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-2xl font-semibold text-green-700">Interactive Demo</h2>
+      <div class="flex space-x-2">
+        <button class="p-2 rounded-full bg-white hover:bg-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+          </svg>
+        </button>
+        <button class="p-2 rounded-full bg-white hover:bg-gray-100">
+          <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-gray-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h10a8 8 0 018 8v2M3 10l6 6m-6-6l6-6" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    
+    <div class="w-full p-4 bg-white rounded-lg shadow-inner">
+      <div id="forestai-demo" class="py-8">
+        <div class="text-center">
+          <button id="load-demo" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded transition">
+            Load Interactive Demo
+          </button>
+        </div>
+        
+        <div id="demo-content" class="hidden mt-6">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div class="bg-gray-100 p-4 rounded-lg">
+              <h3 class="font-semibold text-green-800 mb-2">Forest Health Overview</h3>
+              <div class="h-64 w-full bg-white rounded-lg flex items-center justify-center">
+                <div class="donut-chart-placeholder w-40 h-40 rounded-full border-8 border-green-500 relative">
+                  <div class="absolute inset-0 flex items-center justify-center">
+                    <div class="text-center">
+                      <div class="text-xl font-bold text-green-700">75%</div>
+                      <div class="text-sm text-gray-600">Healthy</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="bg-gray-100 p-4 rounded-lg">
+              <h3 class="font-semibold text-green-800 mb-2">Disease Distribution</h3>
+              <div class="h-64 w-full bg-white rounded-lg p-4">
+                <div class="h-full w-full flex flex-col justify-between">
+                  <div class="grid grid-cols-3 gap-2">
+                    <div class="bg-green-100 p-2 rounded text-center">
+                      <div class="font-bold">Healthy</div>
+                      <div>75%</div>
+                    </div>
+                    <div class="bg-yellow-100 p-2 rounded text-center">
+                      <div class="font-bold">At Risk</div>
+                      <div>15%</div>
+                    </div>
+                    <div class="bg-red-100 p-2 rounded text-center">
+                      <div class="font-bold">Infected</div>
+                      <div>10%</div>
+                    </div>
+                  </div>
+                  
+                  <div class="relative h-10 bg-gray-200 rounded-full overflow-hidden">
+                    <div class="absolute left-0 top-0 h-full bg-green-500" style="width: 75%"></div>
+                    <div class="absolute left-0 top-0 h-full bg-yellow-500 ml-[75%]" style="width: 15%"></div>
+                    <div class="absolute left-0 top-0 h-full bg-red-500 ml-[90%]" style="width: 10%"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="mt-6 bg-gray-100 p-4 rounded-lg">
+            <h3 class="font-semibold text-green-800 mb-2">Health Trends</h3>
+            <div class="h-64 w-full bg-white rounded-lg p-4">
+              <div class="h-full w-full flex items-end justify-between">
+                <div class="relative w-full h-full">
+                  <div class="absolute bottom-0 left-0 w-full border-t border-gray-300"></div>
+                  <div class="absolute bottom-1/4 left-0 w-full border-t border-gray-200 border-dashed"></div>
+                  <div class="absolute bottom-2/4 left-0 w-full border-t border-gray-200 border-dashed"></div>
+                  <div class="absolute bottom-3/4 left-0 w-full border-t border-gray-200 border-dashed"></div>
+                  
+                  <div class="h-full w-full flex items-end justify-between">
+                    <div class="h-[70%] w-8 bg-green-500 rounded-t"></div>
+                    <div class="h-[75%] w-8 bg-green-500 rounded-t"></div>
+                    <div class="h-[65%] w-8 bg-green-500 rounded-t"></div>
+                    <div class="h-[80%] w-8 bg-green-500 rounded-t"></div>
+                    <div class="h-[78%] w-8 bg-green-500 rounded-t"></div>
+                    <div class="h-[82%] w-8 bg-green-500 rounded-t"></div>
+                    <div class="h-[75%] w-8 bg-green-500 rounded-t"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const loadDemoButton = document.getElementById('load-demo');
+    const demoContent = document.getElementById('demo-content');
+    
+    if (loadDemoButton && demoContent) {
+      loadDemoButton.addEventListener('click', () => {
+        demoContent.classList.toggle('hidden');
+        if (!demoContent.classList.contains('hidden')) {
+          loadDemoButton.textContent = 'Hide Demo';
+        } else {
+          loadDemoButton.textContent = 'Load Interactive Demo';
+        }
+      });
+    }
+  });
+</script>

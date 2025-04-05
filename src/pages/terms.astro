@@ -1,0 +1,35 @@
+---
+import MainLayout from '../layouts/MainLayout.astro';
+---
+
+<MainLayout title="Terms of Service">
+  <div class="mx-auto max-w-3xl px-4 py-16 sm:px-6 lg:px-8">
+    <h1 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">Terms of Service</h1>
+    <div class="mt-8 space-y-6 text-gray-600 dark:text-gray-300">
+      <p>Last updated: {new Date().toLocaleDateString()}</p>
+      
+      <h2 class="text-xl font-semibold text-gray-900 dark:text-white">1. Acceptance of Terms</h2>
+      <p>By accessing or using the ForestAI Platform ("Service"), you agree to be bound by these Terms of Service.</p>
+
+      <h2 class="text-xl font-semibold text-gray-900 dark:text-white">2. Description of Service</h2>
+      <p>ForestAI provides AI-powered analysis of forest imagery from drones, including tree detection, health assessment, and growth tracking.</p>
+
+      <h2 class="text-xl font-semibold text-gray-900 dark:text-white">3. User Responsibilities</h2>
+      <p>You agree to:</p>
+      <ul class="list-disc pl-6 mt-2">
+        <li>Provide accurate information when creating an account</li>
+        <li>Not use the Service for illegal purposes</li>
+        <li>Not attempt to reverse engineer or disrupt the Service</li>
+      </ul>
+
+      <h2 class="text-xl font-semibold text-gray-900 dark:text-white">4. Intellectual Property</h2>
+      <p>All content and technology provided through the Service are the property of ForestAI and protected by intellectual property laws.</p>
+
+      <h2 class="text-xl font-semibold text-gray-900 dark:text-white">5. Limitation of Liability</h2>
+      <p>ForestAI shall not be liable for any indirect, incidental, special, consequential or punitive damages resulting from your use of the Service.</p>
+
+      <h2 class="text-xl font-semibold text-gray-900 dark:text-white">6. Governing Law</h2>
+      <p>These Terms shall be governed by the laws of the State of California without regard to its conflict of law provisions.</p>
+    </div>
+  </div>
+</MainLayout>
