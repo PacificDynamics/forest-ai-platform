@@ -8,145 +8,199 @@ import MainLayout from '../layouts/MainLayout.astro';
       <!-- Hero Section -->
       <div class="mx-auto max-w-2xl text-center">
         <h1 class="text-4xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-6xl">
-          <div class="lg:col-span-1 lg:order-2">
-            <div class="lg:pl-4">
-              <div class="relative h-64 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 lg:h-80">
-                <img 
-                  src="/images/case-study-2.jpg" 
-                  alt="Hyperspectral analysis showing stress detection in seedlings"
-                  class="h-full w-full object-cover object-center"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div class="absolute bottom-4 left-4 text-white">
-                  <p class="text-sm font-medium">Hyperspectral Stress Analysis</p>
-                  <p class="text-xs opacity-90">Early Detection Research</p>
+          Case Studies
+        </h1>
+        <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
+          Real-world applications of ForestAI's technology in forest management and research, demonstrating our impact on the forestry industry.
+        </p>
+      </div>
+
+      <!-- Early Stress Detection Research -->
+      <div class="mt-16">
+        <div class="mx-auto max-w-4xl">
+          <div class="rounded-2xl bg-gray-50 dark:bg-gray-800 p-8 lg:p-12">
+            <div class="text-center mb-8">
+              <span class="inline-flex items-center rounded-full bg-blue-100 dark:bg-blue-900 px-3 py-1 text-sm font-medium text-blue-800 dark:text-blue-300">
+                R&D Innovation
+              </span>
+              <h2 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Early Stress Detection Research
+              </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <div class="relative h-64 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-700 lg:h-80">
+                  <img 
+                    src="/images/case-study-2.jpg" 
+                    alt="Hyperspectral analysis showing stress detection in seedlings"
+                    class="h-full w-full object-cover object-center"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div class="absolute bottom-4 left-4 text-white">
+                    <p class="text-sm font-medium">Hyperspectral Stress Analysis</p>
+                    <p class="text-xs opacity-90">Early Detection Research</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="lg:col-span-1 lg:order-1">
-            <div class="text-base leading-7 text-gray-700 dark:text-gray-300 lg:max-w-lg">
-              <div class="mb-6">
-                <span class="inline-flex items-center rounded-full bg-blue-100 dark:bg-blue-900 px-3 py-1 text-sm font-medium text-blue-800 dark:text-blue-300">
-                  R&D Innovation
-                </span>
-              </div>
-              <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                Early Stress Detection Research
-              </h1>
-              <div class="mt-6">
-                <p>
-                  <strong class="text-gray-900 dark:text-white">Challenge:</strong> Traditional forestry monitoring cannot detect seedling stress until visible symptoms appear, typically 2-3 weeks after onset, when intervention may be too late.
-                </p>
-                <p class="mt-4">
-                  <strong class="text-gray-900 dark:text-white">Innovation:</strong> Our hyperspectral AI research focuses on detecting subtle spectral changes in stressed seedlings 7-10 days before visual symptoms manifest.
-                </p>
+              
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Challenge</h3>
+                  <p class="text-gray-600 dark:text-gray-300">
+                    Traditional forestry monitoring cannot detect seedling stress until visible symptoms appear, typically 2-3 weeks after onset, when intervention may be too late.
+                  </p>
+                </div>
                 
-                <div class="mt-8 grid grid-cols-2 gap-4">
-                  <div class="rounded-lg bg-gray-50 dark:bg-gray-800 p-4">
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Innovation</h3>
+                  <p class="text-gray-600 dark:text-gray-300">
+                    Our hyperspectral AI research focuses on detecting subtle spectral changes in stressed seedlings 7-10 days before visual symptoms manifest.
+                  </p>
+                </div>
+                
+                <div class="grid grid-cols-2 gap-4">
+                  <div class="rounded-lg bg-white dark:bg-gray-700 p-4 text-center">
                     <div class="text-2xl font-bold text-green-600 dark:text-green-400">7-10</div>
                     <div class="text-sm text-gray-600 dark:text-gray-300">Days Early Detection</div>
                   </div>
-                  <div class="rounded-lg bg-gray-50 dark:bg-gray-800 p-4">
+                  <div class="rounded-lg bg-white dark:bg-gray-700 p-4 text-center">
                     <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">>90%</div>
                     <div class="text-sm text-gray-600 dark:text-gray-300">AI Model Accuracy</div>
                   </div>
-                  <div class="rounded-lg bg-gray-50 dark:bg-gray-800 p-4">
+                  <div class="rounded-lg bg-white dark:bg-gray-700 p-4 text-center">
                     <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">200+</div>
                     <div class="text-sm text-gray-600 dark:text-gray-300">Spectral Bands</div>
                   </div>
-                  <div class="rounded-lg bg-gray-50 dark:bg-gray-800 p-4">
+                  <div class="rounded-lg bg-white dark:bg-gray-700 p-4 text-center">
                     <div class="text-2xl font-bold text-orange-600 dark:text-orange-400">3</div>
                     <div class="text-sm text-gray-600 dark:text-gray-300">Stress Types</div>
                   </div>
                 </div>
-
-                <div class="mt-8">
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Research Achievements</h3>
-                  <ul class="mt-4 list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-                    <li>Developed spectral signature library for drought stress detection</li>
-                    <li>Created deep learning models for pattern recognition in hyperspectral data</li>
-                    <li>Validated early detection capabilities in controlled laboratory conditions</li>
-                    <li>Published preliminary results showing 8-10 day lead time</li>
-                    <li>Secured NSF SBIR application for Phase I funding</li>
-                  </ul>
-                </div>
               </div>
+            </div>
+            
+            <div class="mt-8">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Research Achievements</h3>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-600 dark:text-gray-300">
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">•</span>
+                  Developed spectral signature library for drought stress detection
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">•</span>
+                  Created deep learning models for pattern recognition in hyperspectral data
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">•</span>
+                  Validated early detection capabilities in controlled laboratory conditions
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">•</span>
+                  Published preliminary results showing 8-10 day lead time
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">•</span>
+                  Secured NSF SBIR application for Phase I funding
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Forest Health Monitoring Platform -->
-      <div class="mt-32">
-        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
-          <div class="lg:col-span-1">
-            <div class="lg:pr-4">
-              <div class="relative h-64 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 lg:h-80">
-                <img 
-                  src="/images/platform-foresthealth.jpg" 
-                  alt="Forest health monitoring dashboard interface"
-                  class="h-full w-full object-cover object-center"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div class="absolute bottom-4 left-4 text-white">
-                  <p class="text-sm font-medium">Production Platform</p>
-                  <p class="text-xs opacity-90">Real-time Health Monitoring</p>
+      <div class="mt-16">
+        <div class="mx-auto max-w-4xl">
+          <div class="rounded-2xl bg-gray-50 dark:bg-gray-800 p-8 lg:p-12">
+            <div class="text-center mb-8">
+              <span class="inline-flex items-center rounded-full bg-purple-100 dark:bg-purple-900 px-3 py-1 text-sm font-medium text-purple-800 dark:text-purple-300">
+                Production Platform
+              </span>
+              <h2 class="mt-4 text-3xl font-bold tracking-tight text-gray-900 dark:text-white">
+                Scalable Forest Health Platform
+              </h2>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+              <div>
+                <div class="relative h-64 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-700 lg:h-80">
+                  <img 
+                    src="/images/platform-foresthealth.jpg" 
+                    alt="Forest health monitoring dashboard interface"
+                    class="h-full w-full object-cover object-center"
+                  />
+                  <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                  <div class="absolute bottom-4 left-4 text-white">
+                    <p class="text-sm font-medium">Production Platform</p>
+                    <p class="text-xs opacity-90">Real-time Health Monitoring</p>
+                  </div>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="lg:col-span-1">
-            <div class="text-base leading-7 text-gray-700 dark:text-gray-300 lg:max-w-lg">
-              <div class="mb-6">
-                <span class="inline-flex items-center rounded-full bg-purple-100 dark:bg-purple-900 px-3 py-1 text-sm font-medium text-purple-800 dark:text-purple-300">
-                  Production Platform
-                </span>
-              </div>
-              <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                Scalable Forest Health Platform
-              </h1>
-              <div class="mt-6">
-                <p>
-                  <strong class="text-gray-900 dark:text-white">Platform:</strong> Our cloud-based production system demonstrates scalable forest health monitoring capabilities with automated processing pipelines and real-time analytics.
-                </p>
-                <p class="mt-4">
-                  <strong class="text-gray-900 dark:text-white">Technology Stack:</strong> Integration of computer vision, machine learning, and cloud infrastructure to process drone imagery and deliver actionable insights for forest managers.
-                </p>
+              
+              <div class="space-y-6">
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Platform Overview</h3>
+                  <p class="text-gray-600 dark:text-gray-300">
+                    Our cloud-based production system demonstrates scalable forest health monitoring capabilities with automated processing pipelines and real-time analytics.
+                  </p>
+                </div>
                 
-                <div class="mt-8 space-y-4">
-                  <div class="rounded-lg bg-gray-50 dark:bg-gray-800 p-4">
+                <div>
+                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-2">Technology Stack</h3>
+                  <p class="text-gray-600 dark:text-gray-300">
+                    Integration of computer vision, machine learning, and cloud infrastructure to process drone imagery and deliver actionable insights for forest managers.
+                  </p>
+                </div>
+                
+                <div class="space-y-4">
+                  <div class="rounded-lg bg-white dark:bg-gray-700 p-4">
                     <h4 class="font-semibold text-gray-900 dark:text-white">Individual Tree Detection</h4>
                     <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Advanced algorithms identify and segment individual trees with high precision</p>
                   </div>
-                  <div class="rounded-lg bg-gray-50 dark:bg-gray-800 p-4">
+                  <div class="rounded-lg bg-white dark:bg-gray-700 p-4">
                     <h4 class="font-semibold text-gray-900 dark:text-white">Health Classification</h4>
                     <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">AI-powered assessment of tree health status and stress indicators</p>
                   </div>
-                  <div class="rounded-lg bg-gray-50 dark:bg-gray-800 p-4">
+                  <div class="rounded-lg bg-white dark:bg-gray-700 p-4">
                     <h4 class="font-semibold text-gray-900 dark:text-white">Automated Reporting</h4>
                     <p class="text-sm text-gray-600 dark:text-gray-300 mt-1">Generate comprehensive analysis reports with visualizations and recommendations</p>
                   </div>
                 </div>
-
-                <div class="mt-8">
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Platform Capabilities</h3>
-                  <ul class="mt-4 list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-                    <li>Cloud-based processing with scalable infrastructure</li>
-                    <li>Web dashboard for real-time monitoring and analysis</li>
-                    <li>Automated workflow from drone data to final reports</li>
-                    <li>Integration with DJI M3 and other drone platforms</li>
-                    <li>Customizable analysis parameters and reporting formats</li>
-                  </ul>
-                </div>
               </div>
+            </div>
+            
+            <div class="mt-8">
+              <h3 class="text-lg font-semibold text-gray-900 dark:text-white mb-4">Platform Capabilities</h3>
+              <ul class="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm text-gray-600 dark:text-gray-300">
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">•</span>
+                  Cloud-based processing with scalable infrastructure
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">•</span>
+                  Web dashboard for real-time monitoring and analysis
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">•</span>
+                  Automated workflow from drone data to final reports
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">•</span>
+                  Integration with DJI M3 and other drone platforms
+                </li>
+                <li class="flex items-start">
+                  <span class="text-green-600 mr-2">•</span>
+                  Customizable analysis parameters and reporting formats
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
 
       <!-- Commercial Impact Section -->
-      <div class="mt-32 rounded-2xl bg-green-50 dark:bg-green-900/20 px-6 py-16">
+      <div class="mt-16 rounded-2xl bg-green-50 dark:bg-green-900/20 px-6 py-16">
         <div class="mx-auto max-w-2xl text-center">
           <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Commercial Impact</h2>
           <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
@@ -196,106 +250,6 @@ import MainLayout from '../layouts/MainLayout.astro';
           </div>
         </div>
       </div>
-
-      <!-- Next Steps -->
-      <div class="mt-32 text-center">
-        <h2 class="text-3xl font-bold tracking-tight text-gray-900 dark:text-white">Ready to Explore Our Technology?</h2>
-        <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-          See how ForestAI can transform your forest management operations with AI-powered early detection
-        </p>
-        <div class="mt-10 flex items-center justify-center gap-x-6">
-          <a
-            href="/demo"
-            class="rounded-md bg-green-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-green-500"
-          >
-            Try Our Demo
-          </a>
-          <a href="/contact" class="text-sm font-semibold leading-6 text-gray-900 dark:text-white">
-            Contact Us <span aria-hidden="true">→</span>
-          </a>
-        </div>
-      </div>
     </div>
   </div>
-</MainLayout>Case Studies
-        </h1>
-        <p class="mt-6 text-lg leading-8 text-gray-600 dark:text-gray-300">
-          Real-world applications demonstrating the impact of our AI-powered forestry technology in research and commercial operations.
-        </p>
-      </div>
-
-      <!-- Auburn University Case Study -->
-      <div class="mt-24">
-        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
-          <div class="lg:col-span-1">
-            <div class="lg:pr-4">
-              <div class="relative h-64 overflow-hidden rounded-lg bg-gray-100 dark:bg-gray-800 lg:h-80">
-                <img 
-                  src="/images/case-study-1.jpg" 
-                  alt="Auburn University forest research site with drone analysis"
-                  class="h-full w-full object-cover object-center"
-                />
-                <div class="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div class="absolute bottom-4 left-4 text-white">
-                  <p class="text-sm font-medium">Auburn University Research Site</p>
-                  <p class="text-xs opacity-90">Loblolly Pine Seedling Monitoring</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="lg:col-span-1">
-            <div class="text-base leading-7 text-gray-700 dark:text-gray-300 lg:max-w-lg">
-              <div class="mb-6">
-                <span class="inline-flex items-center rounded-full bg-green-100 dark:bg-green-900 px-3 py-1 text-sm font-medium text-green-800 dark:text-green-300">
-                  Research Partnership
-                </span>
-              </div>
-              <h1 class="mt-2 text-3xl font-bold tracking-tight text-gray-900 dark:text-white sm:text-4xl">
-                Auburn University Forest Research
-              </h1>
-              <div class="mt-6">
-                <p>
-                  <strong class="text-gray-900 dark:text-white">Challenge:</strong> Auburn University's School of Forestry needed an automated solution to monitor thousands of loblolly pine seedlings across multiple research plots, tracking growth patterns and early stress detection for genetics research.
-                </p>
-                <p class="mt-4">
-                  <strong class="text-gray-900 dark:text-white">Solution:</strong> We deployed our cloud-based analysis platform to process DJI M3 drone imagery, providing automated seedling detection, counting, and health assessment with AI-powered analytics.
-                </p>
-                
-                <div class="mt-8 grid grid-cols-2 gap-4">
-                  <div class="rounded-lg bg-gray-50 dark:bg-gray-800 p-4">
-                    <div class="text-2xl font-bold text-green-600 dark:text-green-400">1,500+</div>
-                    <div class="text-sm text-gray-600 dark:text-gray-300">Seedlings Monitored</div>
-                  </div>
-                  <div class="rounded-lg bg-gray-50 dark:bg-gray-800 p-4">
-                    <div class="text-2xl font-bold text-blue-600 dark:text-blue-400">92%</div>
-                    <div class="text-sm text-gray-600 dark:text-gray-300">Detection Accuracy</div>
-                  </div>
-                  <div class="rounded-lg bg-gray-50 dark:bg-gray-800 p-4">
-                    <div class="text-2xl font-bold text-purple-600 dark:text-purple-400">75%</div>
-                    <div class="text-sm text-gray-600 dark:text-gray-300">Time Reduction</div>
-                  </div>
-                  <div class="rounded-lg bg-gray-50 dark:bg-gray-800 p-4">
-                    <div class="text-2xl font-bold text-orange-600 dark:text-orange-400">6 mo</div>
-                    <div class="text-sm text-gray-600 dark:text-gray-300">Project Duration</div>
-                  </div>
-                </div>
-
-                <div class="mt-8">
-                  <h3 class="text-lg font-semibold text-gray-900 dark:text-white">Key Results</h3>
-                  <ul class="mt-4 list-disc list-inside space-y-2 text-gray-600 dark:text-gray-300">
-                    <li>Automated processing of weekly drone surveys covering 50+ acres</li>
-                    <li>Real-time seedling counting with 92% accuracy vs manual counts</li>
-                    <li>Early detection of growth abnormalities in research plots</li>
-                    <li>Monthly analysis reports with trend visualization</li>
-                    <li>Successful validation of AI algorithms with ground-truth data</li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <!-- Hyperspectral Research Case Study -->
-      <div class="mt-32">
-        <div class="mx-auto grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 lg:mx-0 lg:max-w-none lg:grid-cols-2 lg:items-start lg:gap-y-10">
+</MainLayout>
