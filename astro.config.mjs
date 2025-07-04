@@ -25,7 +25,8 @@ export default defineConfig({
     define: {
       'process.env.FOREST_AI_AWS_REGION': JSON.stringify(process.env.FOREST_AI_AWS_REGION),
       'process.env.FOREST_AI_S3_ACCESS_KEY_ID': JSON.stringify(process.env.FOREST_AI_S3_ACCESS_KEY_ID),
-      'process.env.FOREST_AI_S3_ACCESS_KEY': JSON.stringify(process.env.FOREST_AI_S3_ACCESS_KEY)
+      'process.env.FOREST_AI_S3_ACCESS_KEY': JSON.stringify(process.env.FOREST_AI_S3_ACCESS_KEY),
+      'process.env.FOREST_AI_REPLY_EMAIL': JSON.stringify(process.env.FOREST_AI_REPLY_EMAIL)
     }
   }
 });
