@@ -37,7 +37,7 @@ import MainLayout from '../layouts/MainLayout.astro';
           </p>
           <div class="mt-6">
             <a
-              href="mailto:contact@forestai.us?subject=ForestAI%20Inquiry&body=Hello%20ForestAI%20team,%0A%0AI'm%20interested%20in%20learning%20more%20about%20your%20AI-powered%20forest%20analysis%20solutions.%0A%0APlease%20include:%0A-%20Your%20organization%20name%0A-%20Type%20of%20forest%20management%20you're%20involved%20in%0A-%20Specific%20challenges%20you're%20facing%0A-%20How%20you%20heard%20about%20ForestAI%0A%0AThank%20you!"
+              href={`mailto:${import.meta.env.FOREST_AI_REPLY_EMAIL}?subject=ForestAI%20Inquiry&body=Hello%20ForestAI%20team,%0A%0AI'm%20interested%20in%20learning%20more%20about%20your%20AI-powered%20forest%20analysis%20solutions.%0A%0APlease%20include:%0A-%20Your%20organization%20name%0A-%20Type%20of%20forest%20management%20you're%20involved%20in%0A-%20Specific%20challenges%20you're%20facing%0A-%20How%20you%20heard%20about%20ForestAI%0A%0AThank%20you!`}
               class="inline-flex items-center rounded-md bg-green-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-green-500"
             >
               Send Email
@@ -47,7 +47,7 @@ import MainLayout from '../layouts/MainLayout.astro';
             </a>
           </div>
           <p class="mt-4 text-sm text-gray-500 dark:text-gray-400">
-            Email: <a href="mailto:contact@forestai.us" class="text-green-600 hover:text-green-500">{import.meta.env.FOREST_AI_REPLY_EMAIL}</a>
+            Email: <a href={`mailto:${import.meta.env.FOREST_AI_REPLY_EMAIL}`} class="text-green-600 hover:text-green-500">{import.meta.env.FOREST_AI_REPLY_EMAIL}</a>
           </p>
         </div>
 
@@ -70,7 +70,7 @@ import MainLayout from '../layouts/MainLayout.astro';
             Fill out our contact form to provide us with more details about your specific needs and requirements.
           </p>
           
-          <form class="mt-6 space-y-4" action="mailto:contact@forestai.us" method="post" enctype="text/plain">
+          <form class="mt-6 space-y-4" action={`mailto:${import.meta.env.FOREST_AI_REPLY_EMAIL}`} method="post" enctype="text/plain">
             <div>
               <label for="name" class="block text-sm font-medium text-gray-700 dark:text-gray-300">Name *</label>
               <input
