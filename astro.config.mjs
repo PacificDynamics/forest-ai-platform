@@ -6,7 +6,7 @@ import node from '@astrojs/node';
 export default defineConfig({
   integrations: [tailwind(), react()],
   output: 'server',
-  adapter: node({ mode: 'standalone' }),
+  adapter: node({ mode: 'middleware' }),
   vite: {
     ssr: {
       noExternal: ['lucide-react']
