@@ -1,0 +1,73 @@
+---
+import Navbar from '../../components/Navbar.astro';
+import Footer from '../../components/Footer.astro';
+---
+
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth h-full">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <meta name="description" content="Estimate standing timber volume and market value from a KML boundary using AI-powered canopy height analysis." />
+    <title>Timber Volume Estimation | ForestAI Platform</title>
+  </head>
+  <body class="flex flex-col min-h-screen bg-white dark:bg-gray-900">
+    <Navbar />
+
+    <!-- Tool header bar -->
+    <div class="border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 px-6 py-3">
+      <div class="mx-auto max-w-7xl flex items-center justify-between">
+        <div>
+          <h1 class="text-lg font-semibold text-gray-900 dark:text-white">Timber Volume Estimation</h1>
+          <p class="text-sm text-gray-500 dark:text-gray-400">Upload a KML boundary to estimate standing timber volume and market value</p>
+        </div>
+        <a
+          href="https://forestai-timber-121325752190.us-central1.run.app"
+          target="_blank"
+          class="inline-flex items-center gap-1.5 text-sm text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200"
+        >
+          Open in new tab
+          <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <!-- iframe container — fills remaining viewport height -->
+    <div class="flex-1 relative" style="min-height: 80vh;">
+      <!-- Loading overlay -->
+      <div id="loading-overlay" class="absolute inset-0 flex flex-col items-center justify-center bg-gray-50 dark:bg-gray-800 z-10">
+        <div class="flex flex-col items-center gap-4">
+          <div class="h-12 w-12 rounded-full border-4 border-green-600 border-t-transparent animate-spin"></div>
+          <p class="text-gray-600 dark:text-gray-300 text-sm">Loading Timber Volume Tool…</p>
+          <p class="text-gray-400 dark:text-gray-500 text-xs">First load may take 15–20 seconds</p>
+        </div>
+      </div>
+
+      <iframe
+        id="timber-frame"
+        src="https://forestai-timber-121325752190.us-central1.run.app"
+        class="w-full h-full border-0 absolute inset-0"
+        style="min-height: 80vh;"
+        allow="downloads"
+        title="ForestAI Timber Volume Estimation Tool"
+      ></iframe>
+    </div>
+
+    <Footer />
+
+    <script>
+      const overlay = document.getElementById('loading-overlay');
+      const frame = document.getElementById('timber-frame') as HTMLIFrameElement;
+      if (frame && overlay) {
+        frame.addEventListener('load', () => {
+          overlay.style.display = 'none';
+        });
+        // Fallback: hide overlay after 30s regardless
+        setTimeout(() => { overlay.style.display = 'none'; }, 30000);
+      }
+    </script>
+  </body>
+</html>
