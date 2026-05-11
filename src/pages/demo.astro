@@ -16,7 +16,7 @@ import MainLayout from '../layouts/MainLayout.astro';
       </div>
 
       <!-- Platform Status -->
-      <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-2">
+      <div class="mt-16 grid grid-cols-1 gap-8 lg:grid-cols-3">
         <!-- Production Platform -->
         <div class="rounded-2xl border border-gray-200 dark:border-gray-700 p-8">
           <div class="flex items-center">
@@ -74,6 +74,38 @@ import MainLayout from '../layouts/MainLayout.astro';
               target="_blank"
             >
               Try Interactive Demo
+              <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Timber Volume Tool -->
+        <div class="rounded-2xl border border-gray-200 dark:border-gray-700 p-8">
+          <div class="flex items-center">
+            <div class="flex-shrink-0">
+              <div class="flex h-10 w-10 items-center justify-center rounded-md bg-emerald-700">
+                <svg class="h-6 w-6 text-white" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 3v11.25A2.25 2.25 0 006 16.5h2.25M3.75 3h-1.5m1.5 0h16.5m0 0h1.5m-1.5 0v11.25A2.25 2.25 0 0118 16.5h-2.25m-7.5 0h7.5m-7.5 0l-1 3m8.5-3l1 3m0 0l.5 1.5m-.5-1.5h-9.5m0 0l-.5 1.5M9 11.25v1.5M12 9v3.75m3-6v6" />
+                </svg>
+              </div>
+            </div>
+            <div class="ml-4">
+              <h3 class="text-lg font-medium text-gray-900 dark:text-white">Timber Volume Estimation</h3>
+              <p class="text-sm text-emerald-700 dark:text-emerald-400">Public Access</p>
+            </div>
+          </div>
+          <p class="mt-4 text-gray-600 dark:text-gray-300">
+            Upload a KML boundary file to estimate standing timber volume and market value using 1 m resolution canopy height models and GEDI satellite biomass data. Generates a professional PDF report.
+          </p>
+          <div class="mt-6">
+            <a
+              href="https://forestai-timber-121325752190.us-central1.run.app"
+              class="inline-flex items-center rounded-md bg-emerald-700 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-emerald-600"
+              target="_blank"
+            >
+              Try Timber Volume Tool
               <svg class="ml-2 h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                 <path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25" />
               </svg>
